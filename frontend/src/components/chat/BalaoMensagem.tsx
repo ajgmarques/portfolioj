@@ -1,6 +1,5 @@
 import Mensagem from "@/model/Mensagem"
 import ConteudoMD from "../shared/ConteudoMD"
-import Image from "next/image"
 import { IconBrandOpenai } from "@tabler/icons-react"
 
 export interface BalaoMensagemProps {
@@ -19,8 +18,6 @@ export default function BalaoMensagem(props: BalaoMensagemProps) {
 function BalaoEsquerdo(props: BalaoMensagemProps) {
 	return (
 		<div className="flex items-center gap-2">
-			{/* <Image src={"/chat.svg"} alt="Assistente icone" width={20} height={20}/> */}
-
 			<IconBrandOpenai size={35} className="text-black/60" />
 
 			<div className={`flex flex-col ${props.omitirAutor && "pl-1"}`}>

@@ -1,10 +1,12 @@
-import Readme from "@/components/projetos/Readme"
+import { obterProjeto } from "@/functions/projetos"
+import { obterReadme } from "@/functions/obterReadme"
 import Cabecalho from "@/components/shared/Cabecalho"
 import CarouselImagens from "@/components/shared/CarouselImagens"
 import Container from "@/components/shared/Container"
+import Readme from "@/components/projetos/Readme"
 import Tecnologias from "@/components/tecnologias/Tecnologias"
-import { obterReadme } from "@/functions/obterReadme"
-import { obterProjeto } from "@/functions/projetos"
+
+export const revalidate = 3600 // para gerar novamente a página ao fim de 1 hora
 
 export default async function Projeto(props: { params: Promise<{ id: string }> }) {
 	const { id } = await props.params
